@@ -117,10 +117,11 @@ header {
     .fa-solid {
       display: flex;
       margin-left: 20px;
+    }
 
-      p {
-        margin-left: 20px;
-      }
+    .fonctionnementText {
+      margin-left: 20px;
+      font-weight: bold;
     }
 
     .number {

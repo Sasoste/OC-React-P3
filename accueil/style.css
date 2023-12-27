@@ -109,8 +109,9 @@ header .location .textLocation {
   display: flex;
   margin-left: 20px;
 }
-#fonctionnement .fonctionnementCard .fa-solid p {
+#fonctionnement .fonctionnementCard .fonctionnementText {
   margin-left: 20px;
+  font-weight: bold;
 }
 #fonctionnement .fonctionnementCard .number {
   position: absolute;
