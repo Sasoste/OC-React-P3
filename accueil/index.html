@@ -1,146 +1,142 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OhMyFood</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a18b407708.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Roboto:wght@400;700&display=swap"
+    />
+    <script
+      src="https://kit.fontawesome.com/a18b407708.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <div class="loaderContainer fading-animation">
-        <div class="loader">
-            <span class="letter">o</span><span class="letter">h</span><span class="letter">m</span><span
-                class="letter">y</span><span class="letter">f</span><span class="letter">o</span><span
-                class="letter">o</span><span class="letter">d</span>
-        </div>
+      <div class="loader">
+        <span class="letter">o</span><span class="letter">h</span
+        ><span class="letter">m</span><span class="letter">y</span
+        ><span class="letter">f</span><span class="letter">o</span
+        ><span class="letter">o</span><span class="letter">d</span>
+      </div>
     </div>
     <header>
-        <h1>ohmyfood</h1>
-        <i class="fa-solid fa-location-dot location">
-            <p class="textLocation">Paris, Belleville</p>
-        </i>
+      <h1>ohmyfood</h1>
+      <i class="fa-solid fa-location-dot location">
+        <p class="textLocation">Paris, Belleville</p>
+      </i>
     </header>
     <main>
-        <section id="hero">
-            <h2>Réserver le menu qui vous convient</h2>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button class="btn">Explorer nos restaurants</button>
-        </section>
+      <section id="hero">
+        <h2>Réserver le menu qui vous convient</h2>
+        <p>
+          Découvrez des restaurants d'exception, sélectionnés par nos soins.
+        </p>
+        <button class="btn">Explorer nos restaurants</button>
+      </section>
 
+      <section id="fonctionnement">
+        <h2>Fonctionnement</h2>
+        <div class="fonctionnementCards">
+          <div class="fonctionnementCard">
+            <p class="number">1</p>
+            <i class="fa-solid fa-mobile-screen-button">
+              <p>Choisissez un restaurant</p>
+            </i>
+          </div>
+          <div class="fonctionnementCard">
+            <p class="number">2</p>
+            <i class="fa-solid fa-list-ul">
+              <p>Composez votre menu</p>
+            </i>
+          </div>
+          <div class="fonctionnementCard">
+            <p class="number">3</p>
+            <i class="fa-solid fa-store">
+              <p>Dégustez au restaurant</p>
+            </i>
+          </div>
+        </div>
+      </section>
 
-        <section id="fonctionnement">
-            <h2>Fonctionnement</h2>
-            <div class="fonctionnementCards">
-                <div class="fonctionnementCard">
-                    <p class="number">1</p>
-                    <i class="fa-solid fa-mobile-screen-button">
-                        <p>Choisissez un restaurant</p>
-                    </i>
+      <section id="restaurant">
+        <h2>Restaurants</h2>
+        <div class="restaurantGrid">
+          <a href="../pages/palette.html">
+            <article class="card">
+              <img src="../assets/images/la_palette_du_gout.jpg" alt="" />
+              <p class="new"><strong>Nouveau</strong></p>
+              <div class="cardContent">
+                <div class="cardText">
+                  <h3>La palette du goût</h3>
+                  <p>Ménilmontant</p>
                 </div>
-                <div class="fonctionnementCard">
-                    <p class="number">2</p>
-                    <i class="fa-solid fa-list-ul">
-                        <p>Composez votre menu</p>
-                    </i>
+                <i class="fa-regular fa-heart heart-outline"></i>
+                <i class="fa-solid fa-heart heart-fill"></i>
+              </div>
+            </article>
+          </a>
+          <a href="../pages/note.html">
+            <article class="card">
+              <img src="../assets/images/la_note_enchantee.jpg" alt="" />
+              <p class="new"><strong>Nouveau</strong></p>
+              <div class="cardContent">
+                <div class="cardText">
+                  <h3>La note enchantée</h3>
+                  <p>Charonne</p>
                 </div>
-                <div class="fonctionnementCard">
-                    <p class="number">3</p>
-                    <i class="fa-solid fa-store">
-                        <p>Dégustez au restaurant</p>
-                    </i>
+                <i class="fa-regular fa-heart heart-outline"></i>
+                <i class="fa-solid fa-heart heart-fill"></i>
+              </div>
+            </article>
+          </a>
+          <a href="../pages/francaise.html">
+            <article class="card">
+              <img src="../assets/images/a_la_francaise.jpg" alt="" />
+              <p class="new hidden"><strong>Nouveau</strong></p>
+              <div class="cardContent">
+                <div class="cardText">
+                  <h3>À la française</h3>
+                  <p>Cité Rouge</p>
                 </div>
-            </div>
-        </section>
-
-
-        <section id="restaurant">
-            <h2>Restaurants</h2>
-            <div class="restaurantGrid">
-                <a href="../pages/palette.html">
-                    <article class="card">
-                        <img src="../assets/images/la_palette_du_gout.jpg" alt="">
-                        <p class="new">Nouveau</p>
-                        <div class="cardContent">
-                            <div class="cardText">
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p>
-                            </div>
-                            <input type="checkbox" id="heartCheckbox1" class="heart-checkbox">
-                            <label for="heartCheckbox1" class="heart-icon">
-                                <i class="fa-regular fa-heart heart-outline"></i>
-                                <i class="fa-solid fa-heart heart-fill"></i>
-                            </label>
-                        </div>
-                    </article>
-                </a>
-                <a href="../pages/note.html">
-                    <article class="card">
-                        <img src="../assets/images/la_note_enchantee.jpg" alt="">
-                        <p class="new">Nouveau</p>
-                        <div class="cardContent">
-                            <div class="cardText">
-                                <h3>La note enchantée</h3>
-                                <p>Charonne</p>
-                            </div>
-                            <input type="checkbox" id="heartCheckbox2" class="heart-checkbox">
-                            <label for="heartCheckbox2" class="heart-icon">
-                                <i class="fa-regular fa-heart heart-outline"></i>
-                                <i class="fa-solid fa-heart heart-fill"></i>
-                            </label>
-                        </div>
-                    </article>
-                </a>
-                <a href="../pages/francaise.html">
-                    <article class="card">
-                        <img src="../assets/images/a_la_francaise.jpg" alt="">
-                        <p class="new hidden">Nouveau</p>
-                        <div class="cardContent">
-                            <div class="cardText">
-                                <h3>À la française</h3>
-                                <p>Cité Rouge</p>
-                            </div>
-                            <input type="checkbox" id="heartCheckbox3" class="heart-checkbox">
-                            <label for="heartCheckbox3" class="heart-icon">
-                                <i class="fa-regular fa-heart heart-outline"></i>
-                                <i class="fa-solid fa-heart heart-fill"></i>
-                            </label>
-                        </div>
-                    </article>
-                </a>
-                <a href="../pages/delice.html">
-                    <article class="card">
-                        <img src="../assets/images/le_delice_des_sens.jpg" alt="">
-                        <p class="new hidden">Nouveau</p>
-                        <div class="cardContent">
-                            <div class="cardText">
-                                <h3>Le délice des sens</h3>
-                                <p>Folie-Méricourt</p>
-                            </div>
-                            <input type="checkbox" id="heartCheckbox4" class="heart-checkbox">
-                            <label for="heartCheckbox4" class="heart-icon">
-                                <i class="fa-regular fa-heart heart-outline"></i>
-                                <i class="fa-solid fa-heart heart-fill"></i>
-                            </label>
-                    </article>
-                </a>
-            </div>
-        </section>
+                <i class="fa-regular fa-heart heart-outline"></i>
+                <i class="fa-solid fa-heart heart-fill"></i>
+              </div>
+            </article>
+          </a>
+          <a href="../pages/delice.html">
+            <article class="card">
+              <img src="../assets/images/le_delice_des_sens.jpg" alt="" />
+              <p class="new hidden"><strong>Nouveau</strong></p>
+              <div class="cardContent">
+                <div class="cardText">
+                  <h3>Le délice des sens</h3>
+                  <p>Folie-Méricourt</p>
+                </div>
+                <i class="fa-regular fa-heart heart-outline"></i>
+                <i class="fa-solid fa-heart heart-fill"></i>
+              </div>
+            </article>
+          </a>
+        </div>
+      </section>
     </main>
     <footer>
-        <a href="#" class="logoFooter">ohmyfood</a>
-        <div class="footerLinks">
-            <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
-            <a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
-            <a href="#">Mentions légales</a>
-            <a href="#">Contact</a>
-        </div>
+      <a href="#" class="logoFooter">ohmyfood</a>
+      <div class="footerLinks">
+        <a href="#"
+          ><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a
+        >
+        <a href="#"
+          ><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a
+        >
+        <a href="#">Mentions légales</a>
+        <a href="#">Contact</a>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

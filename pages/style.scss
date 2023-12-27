@@ -160,21 +160,47 @@ main {
       margin: 10px;
       padding: 10px;
       border-radius: 20px;
-      box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.1);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
 
       .priceDescription {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        transition: margin-right 0.3s ease;
       }
 
       .validationTag {
+        color: white;
+        background-color: #99E2D0;
+        height: 100%;
         position: absolute;
         right: 0;
+        top: 50%;
+        transform: translateY(-50%);
         padding: 15px;
+        transition: width 0.3s ease, opacity 0.3s ease;
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      &:hover {
+        .priceDescription {
+          margin-right: 10%;
+        }
+
+        .validationTag {
+          opacity: 1;
+          width: 10%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
   }
