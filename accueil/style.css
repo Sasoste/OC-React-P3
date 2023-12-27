@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Robot, sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.fa-solid .hidden {
+  display: none;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  font-family: shrikhand, sans-serif;
+  font-weight: bold;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+header .location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  padding: 20px 0;
+  width: 100%;
+  font-weight: bold;
+  color: black;
+}
+header .location .textLocation {
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding-bottom: 50px;
+  text-align: center;
+}
+#hero h2 {
+  font-size: 24px;
+  margin: 30px 25% 15px 25%;
+}
+#hero p {
+  font-size: 18px;
+  margin: 0 10% 15px 10%;
+}
+#hero .btn {
+  border: none;
+  color: white;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+#hero .btn:hover {
+  background: linear-gradient(#ff8dea, #a66dec);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#fonctionnement {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+  padding: 0 10px;
+  gap: 25px;
+}
+#fonctionnement h2 {
+  margin-left: 5%;
+}
+#fonctionnement .fonctionnementCards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#fonctionnement .fonctionnementCard {
+  display: flex;
+  margin-left: 5%;
+  position: relative;
+  padding: 30px 20px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+}
+#fonctionnement .fonctionnementCard .fa-solid {
+  display: flex;
+  margin-left: 20px;
+}
+#fonctionnement .fonctionnementCard .fa-solid p {
+  margin-left: 20px;
+}
+#fonctionnement .fonctionnementCard .number {
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #9356dc;
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: white;
+}
+
+#restaurant {
+  padding: 30px 15px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+}
+#restaurant h2 {
+  margin-bottom: 10px;
+}
+#restaurant .restaurantGrid {
+  display: flex;
+  flex-direction: column;
+}
+#restaurant .restaurantGrid a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#restaurant .restaurantGrid .card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+#restaurant .restaurantGrid .card img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+#restaurant .restaurantGrid .new {
+  position: absolute;
+  background-color: #99e2d0;
+  color: #139373;
+  padding: 5px 10px;
+  border-radius: 3px;
+  top: 20px;
+  right: 20px;
+}
+#restaurant .restaurantGrid .cardContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+}
+#restaurant .heart-checkbox {
+  display: none;
+}
+#restaurant .heart-checkbox:checked + .heart-icon .heart-fill {
+  opacity: 1;
+}
+#restaurant .heart-icon {
+  position: relative;
+  cursor: pointer;
+  font-size: 24px;
+}
+#restaurant .heart-icon .heart-outline,
+#restaurant .heart-icon .heart-fill {
+  position: absolute;
+  top: 7px;
+  left: -30px;
+  transition: opacity 0.3s ease;
+}
+#restaurant .heart-icon .heart-fill {
+  opacity: 0;
+  color: transparent;
+  background-image: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 15px;
+}
+footer .logoFooter {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-family: Shrikhand, sans-serif;
+  margin-bottom: 10px;
+}
+footer .footerLinks {
+  display: flex;
+  flex-direction: column;
+}
+footer .footerLinks a {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+footer .footerLinks a i {
+  max-width: 15px;
+  margin-right: 10px;
+}
+
+.loaderContainer {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #f0f0f0;
+  opacity: 1;
+  transition: opacity 3s ease;
+}
+.loaderContainer.fading-animation {
+  animation: fadeOut 3s ease forwards 5s;
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loader span {
+  padding: 0 10px;
+  font-size: 40px;
+  font-family: Shrikhand, sans-serif;
+  font-weight: bold;
+  animation: colorChange 1.5s ease forwards, moveRight 1.5s ease forwards 1.5s;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.loader span:nth-child(1) {
+  animation-delay: 0.25s, 1.75s;
+}
+.loader span:nth-child(2) {
+  animation-delay: 0.5s, 2s;
+}
+.loader span:nth-child(3) {
+  animation-delay: 0.75s, 2.25s;
+}
+.loader span:nth-child(4) {
+  animation-delay: 1s, 2.5s;
+}
+.loader span:nth-child(5) {
+  animation-delay: 1.25s, 2.75s;
+}
+.loader span:nth-child(6) {
+  animation-delay: 1.5s, 3s;
+}
+.loader span:nth-child(7) {
+  animation-delay: 1.75s, 3.25s;
+}
+.loader span:nth-child(8) {
+  animation-delay: 2s, 3.5s;
+}
+
+@keyframes colorChange {
+  from {
+    background-image: #000;
+  }
+  to {
+    background-image: linear-gradient(#ff79da, #9356dc);
+  }
+}
+@keyframes moveRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #fonctionnement {
+    align-items: center;
+  }
+  #fonctionnement h2 {
+    margin: none;
+  }
+  #fonctionnement .fonctionnementCards {
+    width: 50%;
+  }
+  #restaurant {
+    align-items: center;
+  }
+  #restaurant .restaurantGrid {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #fonctionnement .fonctionnementCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #fonctionnement h2 {
+    width: 100%;
+    padding-left: 3%;
+  }
+  #fonctionnement .fonctionnementCard {
+    width: 25%;
+  }
+  #restaurant h2 {
+    padding-left: 13%;
+    padding-bottom: 1%;
+  }
+  #restaurant .restaurantGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%;
+    justify-content: center;
+    padding: 0 10%;
+  }
+  #restaurant .restaurantGrid a {
+    width: 44%;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  footer .logoFooter {
+    width: 10%;
+  }
+  footer .footerLinks {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+  footer .footerLinks a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 16px;
+    margin-right: 25px;
+  }
+  footer .footerLinks a i {
+    max-width: 15px;
+    margin-right: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
