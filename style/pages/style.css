@@ -54,11 +54,14 @@ main img {
   width: 100%;
   position: absolute;
   z-index: -1;
-  margin-top: -260px;
+  height: 275px;
+  margin-top: -200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main #menu {
   background-color: #f6f6f6;
-  margin-top: 260px;
+  margin-top: 200px;
   padding: 5px;
   z-index: 2;
   border-top-right-radius: 50px;
@@ -105,11 +108,16 @@ main #menu .firstLine .heart-icon .heart-fill {
 }
 main #menu h2 {
   font-weight: normal;
-  margin: 0 0 20px 10px;
+  margin: 0 0 15px 10px;
+  display: flex;
+  flex-direction: column;
 }
-main #menu h2 .underline {
-  border-bottom: 3px solid #99e2d0;
-  padding-bottom: 10px;
+main #menu h2::after {
+  content: "";
+  height: 3px;
+  width: 40px;
+  background: #99E2D0;
+  margin-top: 5px;
 }
 @keyframes fadeIn {
   from {
@@ -135,47 +143,53 @@ main #menu .menuSection:nth-child(4) {
   animation-delay: 2.5s;
 }
 main #menu .textCard {
-  position: relative;
   background-color: white;
   margin: 10px;
   padding: 10px;
   border-radius: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-main #menu .textCard .priceDescription {
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  transition: margin-right 0.3s ease;
+  align-items: end;
+  overflow: hidden;
+}
+main #menu .textCard .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 85%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+main #menu .textCard .price {
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: 10px;
 }
 main #menu .textCard .validationTag {
-  color: white;
-  background-color: #99E2D0;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 15px;
-  transition: width 0.3s ease, opacity 0.3s ease;
-  width: 0;
-  opacity: 0;
-  overflow: hidden;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-main #menu .textCard:hover .priceDescription {
-  margin-right: 10%;
-}
-main #menu .textCard:hover .validationTag {
-  opacity: 1;
-  width: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  background-color: #99E2D0;
+  padding: 25px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  margin-right: -78px;
+  transition: margin-right 0.5s ease-in-out;
+}
+main #menu .textCard.textCard:hover .validationTag {
+  margin-right: -10px;
+}
+main #menu .textCard.textCard:hover .description {
+  max-width: 60%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 main .btn {
   border: none;
@@ -239,13 +253,10 @@ footer .footerLinks a i {
   main img {
     width: 100%;
     height: 383px;
-    position: absolute;
-    z-index: -1;
-    margin-top: -260px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    margin-top: -350px;
   }
   main #menu {
+    margin-top: 350px;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
