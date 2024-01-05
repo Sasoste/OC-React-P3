@@ -108,7 +108,7 @@ main #menu .firstLine .heart-icon .heart-fill {
 }
 main #menu h2 {
   font-weight: normal;
-  margin: 0 0 20px 10px;
+  margin: 0 0 15px 10px;
   display: flex;
   flex-direction: column;
 }
@@ -164,6 +164,7 @@ main #menu .textCard .description {
   white-space: nowrap;
 }
 main #menu .textCard .price {
+  font-weight: bold;
   margin-left: auto;
   margin-right: 10px;
 }
