@@ -266,6 +266,10 @@ footer {
   opacity: 1;
   transition: opacity 3s ease;
 
+  .loader {
+    width: 50%;
+  }
+
   &.fading-animation {
     animation: fadeOut 3s ease forwards 5s;
   }
@@ -278,44 +282,25 @@ footer {
   }
 }
 
-.loader {
-  span {
-    padding: 0 10px;
-    font-size: 40px;
-    font-family: Shrikhand, sans-serif;
-    font-weight: bold;
-    animation: colorChange 1.5s ease forwards, moveRight 1.5s ease forwards 1.5s;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-
-  @for $i from 1 through 8 {
-    span:nth-child(#{$i}) {
-      animation-delay: 0.25s * $i, 0.25s * $i + 1.5s;
-    }
-  }
-}
-
-@keyframes colorChange {
+@keyframes fadeIn {
   from {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    opacity: 0;
   }
 
   to {
-    background-image: linear-gradient(#ff79da, #9356dc);
-  }
-}
-
-@keyframes moveRight {
-  from {
-    transform: translateX(0);
     opacity: 1;
   }
+}
 
-  to {
-    transform: translateX(100px);
-    opacity: 0;
+.loader {
+  #svgGroup {
+    @for $i from 0 through 7 {
+      #path#{$i} {
+        opacity: 0;
+        animation: fadeIn 1s ease forwards;
+        animation-delay: 0.5s * $i;
+      }
+    }
   }
 }
 
