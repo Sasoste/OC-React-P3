@@ -120,10 +120,15 @@ main {
     h2 {
       font-weight: normal;
       margin: 0 0 20px 10px;
+      display: flex;
+      flex-direction: column;
 
-      .underline {
-        border-bottom: 3px solid #99e2d0;
-        padding-bottom: 10px;
+      &::after {
+        content: "";
+        height: 3px;
+        width: 40px;
+        background: #99E2D0;
+        margin-top: 5px;
       }
     }
 

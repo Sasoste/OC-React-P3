@@ -109,10 +109,15 @@ main #menu .firstLine .heart-icon .heart-fill {
 main #menu h2 {
   font-weight: normal;
   margin: 0 0 20px 10px;
+  display: flex;
+  flex-direction: column;
 }
-main #menu h2 .underline {
-  border-bottom: 3px solid #99e2d0;
-  padding-bottom: 10px;
+main #menu h2::after {
+  content: "";
+  height: 3px;
+  width: 40px;
+  background: #99E2D0;
+  margin-top: 5px;
 }
 @keyframes fadeIn {
   from {
