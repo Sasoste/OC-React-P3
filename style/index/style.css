@@ -5,6 +5,11 @@
   font-family: Robot, sans-serif;
 }
 
+body {
+  max-width: 1440px;
+  margin: auto;
+}
+
 .hidden {
   display: none;
 }
@@ -88,7 +93,7 @@ header .location .textLocation {
   gap: 25px;
 }
 #fonctionnement h2 {
-  margin-left: 5%;
+  padding-left: 5%;
 }
 #fonctionnement .fonctionnementCards {
   display: grid;
@@ -228,15 +233,13 @@ footer .footerLinks a i {
   z-index: 9999;
   display: flex;
   justify-content: center;
+  margin-left: -20%;
   align-items: center;
   height: 100vh;
-  width: 100vw;
+  width: 120vw;
   background: #f0f0f0;
   opacity: 1;
   transition: opacity 3s ease;
-}
-.loaderContainer .loader {
-  width: 50%;
 }
 .loaderContainer.fading-animation {
   animation: fadeOut 3s ease forwards 5s;
@@ -302,7 +305,7 @@ footer .footerLinks a i {
     align-items: center;
   }
   #fonctionnement h2 {
-    margin: 0;
+    padding-left: 0;
   }
   #fonctionnement .fonctionnementCards {
     width: 50%;
@@ -323,7 +326,7 @@ footer .footerLinks a i {
   }
   #fonctionnement h2 {
     width: 100%;
-    padding-left: 3%;
+    padding-left: 8%;
   }
   #fonctionnement .fonctionnementCard {
     width: 25%;
