@@ -6,7 +6,8 @@
 
 h2,
 h3,
-p {
+p,
+span {
   font-family: Roboto, sans-serif;
 }
 
@@ -163,7 +164,7 @@ main {
 
     .textCard {
       background-color: white;
-      margin: 10px;
+      margin: 10px 10px 20px 10px;
       padding: 10px;
       border-radius: 20px;
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
