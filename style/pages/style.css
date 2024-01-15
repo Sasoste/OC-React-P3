@@ -29,17 +29,23 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 10px;
 }
 header .logo {
+  font-family: shrikhand, sans-serif;
+  font-weight: 400;
   font-size: 30px;
-  font-family: Shrikhand, sans-serif;
+  line-height: 44px;
+  padding: 14px 0 5px 0px;
+  margin-left: -40px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
   text-decoration: none;
   color: #101010;
 }
 header .backArrow {
-  position: absolute;
-  left: 5%;
+  font-size: 16px;
+  margin: 24px auto 23px 23px;
 }
 header .backArrow:link,
 header .backArrow:visited,
@@ -63,7 +69,6 @@ main img {
 main #menu {
   background-color: #f6f6f6;
   margin-top: 200px;
-  padding: 5px;
   z-index: 2;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
@@ -73,43 +78,47 @@ main #menu {
 }
 main #menu .firstLine {
   display: flex;
-  margin: 20px;
+  margin: 32px 17px 0 17px;
   align-items: center;
   justify-content: space-between;
 }
 main #menu .firstLine h1 {
   font-size: 28px;
   font-family: shrikhand, sans-serif;
+  font-weight: 400;
 }
-main #menu .firstLine .heart-checkbox {
-  display: none;
-}
-main #menu .firstLine .heart-checkbox:checked + .heart-icon .heart-fill {
-  opacity: 1;
-}
-main #menu .firstLine .heart-icon {
-  display: flex;
-  align-items: center;
+main #menu .firstLine .heart-container {
   position: relative;
-  padding-right: 20px;
-  cursor: pointer;
-  font-size: 24px;
+  display: inline-block;
+  width: 22px;
+  height: 21px;
 }
-main #menu .firstLine .heart-icon .heart-outline,
-main #menu .firstLine .heart-icon .heart-fill {
+main #menu .firstLine .heart-outline,
+main #menu .firstLine .heart-fill {
   position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  font-size: 22px;
+  cursor: pointer;
   transition: opacity 0.3s ease;
 }
-main #menu .firstLine .heart-icon .heart-fill {
-  opacity: 0;
+main #menu .firstLine .heart-outline {
+  color: black;
+}
+main #menu .firstLine .heart-fill {
   color: transparent;
   background-image: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   background-clip: text;
+  opacity: 0;
+}
+main #menu .firstLine .heart-container:hover .heart-fill {
+  opacity: 1;
 }
 main #menu h2 {
-  font-weight: normal;
-  margin: 0 0 15px 10px;
+  font-weight: 300;
+  margin: 40px 0 13px 12px;
   display: flex;
   flex-direction: column;
 }
@@ -145,29 +154,37 @@ main #menu .menuSection:nth-child(4) {
 }
 main #menu .textCard {
   background-color: white;
-  margin: 10px 10px 20px 10px;
-  padding: 10px;
+  margin: 0px 13px 11px 13px;
   border-radius: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: end;
   overflow: hidden;
+  justify-content: space-between;
 }
 main #menu .textCard .description {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   max-width: 85%;
+}
+main #menu .textCard .description h3 {
+  margin: 12px 0 5px 15px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+main #menu .textCard .description p {
+  margin: 0 0 12px 15px;
+  font-weight: 300;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 main #menu .textCard .price {
-  font-weight: bold;
-  margin-left: auto;
-  margin-right: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  margin: 37px 15px 13px auto;
 }
 main #menu .textCard .validationTag {
   display: flex;
@@ -178,19 +195,14 @@ main #menu .textCard .validationTag {
   padding: 25px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  margin-top: -10px;
-  margin-bottom: -10px;
-  margin-right: -78px;
+  margin-right: -70px;
   transition: margin-right 0.5s ease-in-out;
 }
 main #menu .textCard.textCard:hover .validationTag {
-  margin-right: -10px;
+  margin-right: 0px;
 }
 main #menu .textCard.textCard:hover .description {
-  max-width: 60%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+  max-width: calc(100% - 120px);
 }
 main .btn {
   border: none;
@@ -199,9 +211,11 @@ main .btn {
   padding: 15px 10px;
   border-radius: 30px;
   font-size: 16px;
+  font-weight: 500;
+  font-family: Roboto, sans-serif;
   width: 186px;
   align-self: center;
-  margin: 30px 0;
+  margin: 40px 0;
 }
 main .btn:hover {
   background: linear-gradient(#ff8dea, #a66dec);
@@ -212,23 +226,29 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: #353535;
-  padding: 20px 25px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 footer .logoFooter {
-  font-family: Shrikhand;
+  text-decoration: none;
   color: white;
   font-size: 18px;
-  text-decoration: none;
-  margin-bottom: 10px;
+  font-family: Shrikhand, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 22px 0 16px 25px;
 }
 footer .footerLinks {
   display: flex;
   flex-direction: column;
+  margin: 0 0 22px 25px;
 }
 footer .footerLinks a {
   text-decoration: none;
   color: white;
   margin-bottom: 10px;
+  font-size: 16px;
 }
 footer .footerLinks a i {
   max-width: 15px;
@@ -240,7 +260,7 @@ footer .footerLinks a i {
     align-items: center;
   }
   main #menu .firstLine h1 {
-    padding-right: 20px;
+    margin-right: 20px;
   }
   main #menu .menuSection {
     width: 70%;
@@ -251,6 +271,9 @@ footer .footerLinks a i {
     max-width: 1440px;
     margin: auto;
   }
+  header .logo {
+    padding: 30px 0 32px 0;
+  }
   main img {
     width: 100%;
     height: 383px;
@@ -258,7 +281,7 @@ footer .footerLinks a i {
   }
   main #menu {
     margin-top: 350px;
-    width: 70%;
+    width: 73%;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
@@ -273,30 +296,32 @@ footer .footerLinks a i {
   main #menu .menuSection {
     width: 60%;
   }
-  footer {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    padding-top: 40px;
-  }
-  footer .logoFooter {
-    width: 10%;
-  }
-  footer .footerLinks {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-  }
-  footer .footerLinks a {
-    text-decoration: none;
-    color: white;
-    margin-bottom: 10px;
-    font-size: 16px;
-    margin-right: 25px;
-  }
-  footer .footerLinks a i {
-    max-width: 15px;
-    margin-right: 10px;
-  }
+}
+footer {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+footer .logoFooter {
+  width: 10%;
+  margin: 57px 25px 26px 30px;
+}
+footer .footerLinks {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin: 0;
+}
+footer .footerLinks a {
+  text-decoration: none;
+  color: white;
+  margin: 57px 7px 26px 0;
+}
+footer .footerLinks a:nth-child(2) {
+  margin-right: 30px;
+}
+footer .footerLinks a i {
+  max-width: 15px;
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */
