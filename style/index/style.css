@@ -30,6 +30,7 @@ header h1 {
   text-align: center;
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
   z-index: 2;
+  color: #101010;
 }
 header .location {
   display: flex;
