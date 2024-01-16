@@ -320,9 +320,14 @@ footer {
 
   header {
     .logo {
+      font-size: 34px;
       padding: 30px 0 32px 0px;
-      margin-left: -40px;
-      width: calc(100% - 40px);
+      margin-left: -60px;
+    }
+
+    .backArrow {
+      z-index: 10;
+      margin: 0;
     }
   }
 
