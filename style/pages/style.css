@@ -274,11 +274,11 @@ footer .footerLinks a i {
   header .logo {
     font-size: 34px;
     padding: 30px 0 32px 0px;
-    margin-left: -40px;
+    margin-left: -15px;
   }
   header .backArrow {
     z-index: 10;
-    margin: 0;
+    margin: 0 0 0 23px;
   }
   main img {
     width: 100%;
