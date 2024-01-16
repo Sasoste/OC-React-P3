@@ -88,6 +88,9 @@ header .location .textLocation {
 #fonctionnement h2 {
   margin: 48px 80px 6px 20px;
 }
+#fonctionnement .fonctionnementCards {
+  margin-bottom: 48px;
+}
 #fonctionnement .fonctionnementCards .fonctionnementCard {
   display: flex;
   align-items: center;
