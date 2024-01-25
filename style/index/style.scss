@@ -380,16 +380,19 @@ footer {
   }
 
   #fonctionnement {
+
+    margin: 50px 0 50px 180px;
+
     h2 {
-      margin: 50px 0 25px 180px;
+      margin: 0;
     }
 
     .fonctionnementCards {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
-      margin: 0px 0px 50px 60px;
+      justify-content: none;
+      margin: 25px 0 0 15px;
 
       .fonctionnementCard {
         width: 25%;
@@ -403,20 +406,21 @@ footer {
     display: flex;
     flex-direction: column;
 
+
     h2 {
-      margin: 30px 0px 28px 180px;
+      margin: 56px 180px 28px 180px;
     }
 
     .restaurantGrid {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 50px 100px;
-      justify-content: center;
-      margin: 0 0 30px 0;
+      justify-content: space-between;
+      gap: 50px 95px;
+      margin: 0 180px 30px 180px;
 
       a {
-        width: 34%;
+        width: 42%;
       }
     }
   }

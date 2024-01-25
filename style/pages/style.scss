@@ -313,11 +313,6 @@ footer {
 
 @media only screen and (min-width: 1024px) {
 
-  body {
-    max-width: 1440px;
-    margin: auto;
-  }
-
   header {
     .logo {
       font-size: 34px;
@@ -340,7 +335,8 @@ footer {
 
     #menu {
       margin-top: 350px;
-      width: 73%;
+      max-width: 1055px;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
       align-items: center;
