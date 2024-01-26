@@ -348,7 +348,7 @@ footer .footerLinks a i {
     margin: 0 0px 43px 0px;
   }
   #fonctionnement {
-    margin: 50px 0 50px 180px;
+    margin: 50px 180px 50px 180px;
   }
   #fonctionnement h2 {
     margin: 0;
@@ -361,7 +361,7 @@ footer .footerLinks a i {
     margin: 25px 0 0 15px;
   }
   #fonctionnement .fonctionnementCards .fonctionnementCard {
-    width: 25%;
+    width: 28%;
     margin: 0 34px 0 0;
   }
   #restaurant {
