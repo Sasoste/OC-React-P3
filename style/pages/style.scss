@@ -1,4 +1,5 @@
 @use '../../common/common.scss';
+@use '../../common/variables.scss';
 
 * {
   margin: 0;
@@ -63,7 +64,7 @@ main {
 
   // Partie Menu
   #menu {
-    background-color: #f6f6f6;
+    background-color: $color-light-gray;
     margin-top: 200px;
     z-index: 2;
     border-top-right-radius: 50px;
@@ -83,40 +84,6 @@ main {
         font-family: shrikhand, sans-serif;
         font-weight: 400;
       }
-
-      .heart-container {
-        position: relative;
-        display: inline-block;
-        width: 22px;
-        height: 21px;
-      }
-
-      .heart-outline,
-      .heart-fill {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: inline-block;
-        font-size: 22px;
-        cursor: pointer;
-        transition: opacity 0.3s ease;
-      }
-
-      .heart-outline {
-        color: black;
-      }
-
-      .heart-fill {
-        color: transparent;
-        background-image: linear-gradient(#9356dc, #ff79da);
-        -webkit-background-clip: text;
-        background-clip: text;
-        opacity: 0;
-      }
-
-      .heart-container:hover .heart-fill {
-        opacity: 1;
-      }
     }
 
     h2 {
@@ -130,7 +97,7 @@ main {
         content: "";
         height: 3px;
         width: 40px;
-        background: #99E2D0;
+        background: $color-mint;
         margin-top: 5px;
       }
     }
@@ -207,7 +174,7 @@ main {
         justify-content: center;
         align-items: center;
         color: white;
-        background-color: #99E2D0;
+        background-color: $color-mint;
         padding: 25px;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -292,6 +259,4 @@ main {
       }
     }
   }
-
-
 }

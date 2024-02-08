@@ -103,6 +103,40 @@ footer .footerLinks a i {
   cursor: pointer;
 }
 
+.heart-container {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 21px;
+}
+
+.heart-outline,
+.heart-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  font-size: 22px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.heart-outline {
+  color: black;
+}
+
+.heart-fill {
+  color: transparent;
+  background-image: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+}
+
+.heart-container:hover .heart-fill {
+  opacity: 1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -179,35 +213,6 @@ main #menu .firstLine h1 {
   font-size: 28px;
   font-family: shrikhand, sans-serif;
   font-weight: 400;
-}
-main #menu .firstLine .heart-container {
-  position: relative;
-  display: inline-block;
-  width: 22px;
-  height: 21px;
-}
-main #menu .firstLine .heart-outline,
-main #menu .firstLine .heart-fill {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  font-size: 22px;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-main #menu .firstLine .heart-outline {
-  color: black;
-}
-main #menu .firstLine .heart-fill {
-  color: transparent;
-  background-image: linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  background-clip: text;
-  opacity: 0;
-}
-main #menu .firstLine .heart-container:hover .heart-fill {
-  opacity: 1;
 }
 main #menu h2 {
   font-weight: 300;

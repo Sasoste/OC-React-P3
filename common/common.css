@@ -101,4 +101,38 @@ footer .footerLinks a i {
   background: linear-gradient(#ff8dea, #a66dec);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   cursor: pointer;
+}
+
+.heart-container {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 21px;
+}
+
+.heart-outline,
+.heart-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  font-size: 22px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.heart-outline {
+  color: black;
+}
+
+.heart-fill {
+  color: transparent;
+  background-image: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+}
+
+.heart-container:hover .heart-fill {
+  opacity: 1;
 }/*# sourceMappingURL=common.css.map */

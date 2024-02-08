@@ -1,5 +1,6 @@
-// Partie header 
+@use './variables.scss';
 
+// Partie header 
 header {
     display: flex;
     justify-content: center;
@@ -31,7 +32,7 @@ header {
 footer {
     display: flex;
     flex-direction: column;
-    background-color: #353535;
+    background-color: $color-dark;
     font-family: Roboto, sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -104,11 +105,10 @@ footer {
 }
 
 // Boutons 
-
 .btn {
     border: none;
     color: white;
-    background: linear-gradient(#ff79da, #9356dc);
+    background: $gradient-pink-purple;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 15px 20px;
     border-radius: 30px;
@@ -119,8 +119,43 @@ footer {
     min-width: 186px;
 
     &:hover {
-        background: linear-gradient(#ff8dea, #a66dec);
+        background: $gradient-pink-purple-lighter;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         cursor: pointer;
     }
+}
+
+// Animation coeur 
+.heart-container {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 21px;
+}
+
+.heart-outline,
+.heart-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    font-size: 22px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.heart-outline {
+    color: black;
+}
+
+.heart-fill {
+    color: transparent;
+    background-image: $gradient-purple-pink;
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0;
+}
+
+.heart-container:hover .heart-fill {
+    opacity: 1;
 }
