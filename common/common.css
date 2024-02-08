@@ -1,0 +1,63 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+footer .logoFooter {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-family: Shrikhand, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 22px 0 16px 25px;
+}
+footer .footerLinks {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 22px 25px;
+}
+footer .footerLinks a {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+footer .footerLinks a i {
+  max-width: 15px;
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  footer .logoFooter {
+    width: 10%;
+    margin: 57px 25px 26px 30px;
+  }
+  footer .footerLinks {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin: 0;
+  }
+  footer .footerLinks a {
+    text-decoration: none;
+    color: white;
+    margin: 57px 7px 26px 0;
+  }
+  footer .footerLinks a:nth-child(2) {
+    margin-right: 30px;
+  }
+  footer .footerLinks a i {
+    max-width: 15px;
+    margin-right: 10px;
+  }
+}/*# sourceMappingURL=common.css.map */
