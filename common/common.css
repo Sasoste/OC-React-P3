@@ -60,4 +60,22 @@ footer .footerLinks a i {
     max-width: 15px;
     margin-right: 10px;
   }
+}
+.btn {
+  border: none;
+  color: white;
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.3s, box-shadow 0.3s;
+  margin: 0 75px 57px 82px;
+  min-width: 186px;
+}
+.btn:hover {
+  background: linear-gradient(#ff8dea, #a66dec);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }/*# sourceMappingURL=common.css.map */
